@@ -1,0 +1,352 @@
+version: 2
+
+sources:
+  - name: symptom_search_country_daily
+    database: bigquery-public-data  
+    schema: covid19_symptom_search  
+    tables:
+      - name: symptom_search_country_daily
+        description: >
+          A table showing the symptoms per day by country. This is a wide, pivoted table.
+        columns:
+            # tests:
+            #   - unique
+            #   - not_null
+          - name: country_region_code
+            description: country region code
+          - name: country_region
+            description: country region
+          - name: sub_region_1
+            description: sub region 1
+          - name: sub_region_1_code
+            description: sub region 1 code
+          - name: sub_region_2
+            description: sub region 2
+          - name: sub_region_2_code
+            description: sub region 2 code
+          - name: place_id
+            description: place id
+          - name: date
+            description: date
+          - name: symptom_abdominal_obesity
+            description: symptom abdominal obesity
+          - name: symptom_abdominal_pain
+            description: symptom abdominal pain
+          - name: symptom_acne
+            description: symptom acne
+          - name: symptom_actinic_keratosis
+            description: symptom actinic keratosis
+          - name: symptom_acute_bronchitis
+            description: symptom acute bronchitis
+          - name: symptom_adrenal_crisis
+            description: symptom adrenal crisis
+          - name: symptom_ageusia
+            description: symptom ageusia
+          - name: symptom_alcoholism
+            description: symptom alcoholism
+          - name: symptom_allergic_conjunctivitis
+            description: symptom allergic conjunctivitis
+          - name: symptom_allergy
+            description: symptom allergy
+          - name: symptom_amblyopia
+            description: symptom amblyopia
+          - name: symptom_amenorrhea
+            description: symptom amenorrhea
+          - name: symptom_amnesia
+            description: symptom amnesia
+          - name: symptom_anal_fissure
+            description: symptom anal fissure
+          - name: symptom_anaphylaxis
+            description: symptom anaphylaxis
+          - name: symptom_anemia
+            description: symptom anemia
+          - name: symptom_angina_pectoris
+            description: symptom angina pectoris
+          - name: symptom_angioedema
+            description: symptom angioedema
+          - name: symptom_angular_cheilitis
+            description: symptom angular cheilitis
+          - name: symptom_anosmia
+            description: symptom anosmia
+          - name: symptom_anxiety
+            description: symptom anxiety
+          - name: symptom_aphasia
+            description: symptom aphasia
+          - name: symptom_aphonia
+            description: symptom aphonia
+          - name: symptom_apnea
+            description: symptom apnea
+          - name: symptom_arthralgia
+            description: symptom arthralgia
+          - name: symptom_arthritis
+            description: symptom arthritis
+          - name: symptom_ascites
+            description: symptom ascites
+          - name: symptom_asperger_syndrome
+            description: symptom asperger syndrome
+          - name: symptom_asphyxia
+            description: symptom asphyxia
+          - name: symptom_asthma
+            description: symptom asthma
+          - name: symptom_astigmatism
+            description: symptom astigmatism
+          - name: symptom_ataxia
+            description: symptom ataxia
+          - name: symptom_atheroma
+            description: symptom atheroma
+          - name: symptom_attention_deficit_hyperactivity_disorder
+            description: symptom attention deficit hyperactivity disorder
+          - name: symptom_auditory_hallucination
+            description: symptom auditory hallucination
+          - name: symptom_autoimmune_disease
+            description: symptom autoimmune disease
+          - name: symptom_avoidant_personality_disorder
+            description: symptom avoidant personality disorder
+          - name: symptom_back_pain
+            description: symptom back pain
+          - name: symptom_bacterial_vaginosis
+            description: symptom bacterial vaginosis
+          - name: symptom_balance_disorder
+            description: symptom balance disorder
+          - name: symptom_beau_s_lines
+            description: symptom beau s lines
+          - name: symptom_bell_s_palsy
+            description: symptom bell s palsy
+          - name: symptom_biliary_colic
+            description: symptom biliary colic
+          - name: symptom_binge_eating
+            description: symptom binge eating
+          - name: symptom_bleeding
+            description: symptom bleeding
+          - name: symptom_bleeding_on_probing
+            description: symptom bleeding on probing
+          - name: symptom_blepharospasm
+            description: symptom blepharospasm
+          - name: symptom_crepitus
+            description: symptom crepitus
+          - name: symptom_croup
+            description: symptom croup
+          - name: symptom_cyanosis
+            description: symptom cyanosis
+          - name: symptom_dandruff
+            description: symptom dandruff
+          - name: symptom_delayed_onset_muscle_soreness
+            description: symptom delayed onset muscle soreness
+          - name: symptom_dementia
+            description: symptom dementia
+          - name: symptom_dentin_hypersensitivity
+            description: symptom dentin hypersensitivity
+          - name: symptom_depersonalization
+            description: symptom depersonalization
+          - name: symptom_depression
+            description: symptom depression
+          - name: symptom_dermatitis
+            description: symptom dermatitis
+          - name: symptom_desquamation
+            description: symptom desquamation
+          - name: symptom_developmental_disability
+            description: symptom developmental disability
+          - name: symptom_diabetes
+            description: symptom diabetes
+          - name: symptom_diabetic_ketoacidosis
+            description: symptom diabetic ketoacidosis
+          - name: symptom_diarrhea
+            description: symptom diarrhea
+          - name: symptom_dizziness
+            description: symptom dizziness
+          - name: symptom_dry_eye_syndrome
+            description: symptom dry eye syndrome
+          - name: symptom_dysautonomia
+            description: symptom dysautonomia
+          - name: symptom_dysgeusia
+            description: symptom dysgeusia
+          - name: symptom_dysmenorrhea
+            description: symptom dysmenorrhea
+          - name: symptom_dyspareunia
+            description: symptom dyspareunia
+          - name: symptom_dysphagia
+            description: symptom dysphagia
+          - name: symptom_dysphoria
+            description: symptom dysphoria
+          - name: symptom_dystonia
+            description: symptom dystonia
+          - name: symptom_dysuria
+            description: symptom dysuria
+          - name: symptom_ear_pain
+            description: symptom ear pain
+          - name: symptom_eczema
+            description: symptom eczema
+          - name: symptom_edema
+            description: symptom edema
+          - name: symptom_encephalitis
+            description: symptom encephalitis
+          - name: symptom_encephalopathy
+            description: symptom encephalopathy
+          - name: symptom_epidermoid_cyst
+            description: symptom epidermoid cyst
+          - name: symptom_epilepsy
+            description: symptom epilepsy
+          - name: symptom_epiphora
+            description: symptom epiphora
+          - name: symptom_erectile_dysfunction
+            description: symptom erectile dysfunction
+          - name: symptom_erythema
+            description: symptom erythema
+          - name: symptom_erythema_chronicum_migrans
+            description: symptom erythema chronicum migrans
+          - name: symptom_esophagitis
+            description: symptom esophagitis
+          - name: symptom_excessive_daytime_sleepiness
+            description: symptom excessive daytime sleepiness
+          - name: symptom_eye_pain
+            description: symptom eye pain
+          - name: symptom_eye_strain
+            description: symptom eye strain
+          - name: symptom_facial_nerve_paralysis
+            description: symptom facial nerve paralysis
+          - name: symptom_facial_swelling
+            description: symptom facial swelling
+          - name: symptom_fasciculation
+            description: symptom fasciculation
+          - name: symptom_fatigue
+            description: symptom fatigue
+          - name: symptom_fatty_liver_disease
+            description: symptom fatty liver disease
+          - name: symptom_fecal_incontinence
+            description: symptom fecal incontinence
+          - name: symptom_fever
+            description: symptom fever
+          - name: symptom_fibrillation
+            description: symptom fibrillation
+          - name: symptom_fibrocystic_breast_changes
+            description: symptom fibrocystic breast changes
+          - name: symptom_fibromyalgia
+            description: symptom fibromyalgia
+          - name: symptom_flatulence
+            description: symptom flatulence
+          - name: symptom_floater
+            description: symptom floater
+          - name: symptom_focal_seizure
+            description: symptom focal seizure
+          - name: symptom_folate_deficiency
+            description: symptom folate deficiency
+          - name: symptom_food_craving
+            description: symptom food craving
+          - name: symptom_food_intolerance
+            description: symptom food intolerance
+          - name: symptom_sputum
+            description: symptom sputum
+          - name: symptom_stomach_rumble
+            description: symptom stomach rumble
+          - name: symptom_strabismus
+            description: symptom strabismus
+          - name: symptom_stretch_marks
+            description: symptom stretch marks
+          - name: symptom_stridor
+            description: symptom stridor
+          - name: symptom_stroke
+            description: symptom stroke
+          - name: symptom_stuttering
+            description: symptom stuttering
+          - name: symptom_subdural_hematoma
+            description: symptom subdural hematoma
+          - name: symptom_suicidal_ideation
+            description: symptom suicidal ideation
+          - name: symptom_swelling
+            description: symptom swelling
+          - name: symptom_swollen_feet
+            description: symptom swollen feet
+          - name: symptom_swollen_lymph_nodes
+            description: symptom swollen lymph nodes
+          - name: symptom_syncope
+            description: symptom syncope
+          - name: symptom_tachycardia
+            description: symptom tachycardia
+          - name: symptom_tachypnea
+            description: symptom tachypnea
+          - name: symptom_telangiectasia
+            description: symptom telangiectasia
+          - name: symptom_tenderness
+            description: symptom tenderness
+          - name: symptom_testicular_pain
+            description: symptom testicular pain
+          - name: symptom_throat_irritation
+            description: symptom throat irritation
+          - name: symptom_thrombocytopenia
+            description: symptom thrombocytopenia
+          - name: symptom_thyroid_nodule
+            description: symptom thyroid nodule
+          - name: symptom_tic
+            description: symptom tic
+          - name: symptom_tinnitus
+            description: symptom tinnitus
+          - name: symptom_tonsillitis
+            description: symptom tonsillitis
+          - name: symptom_toothache
+            description: symptom toothache
+          - name: symptom_tremor
+            description: symptom tremor
+          - name: symptom_trichoptilosis
+            description: symptom trichoptilosis
+          - name: symptom_tumor
+            description: symptom tumor
+          - name: symptom_type_2_diabetes
+            description: symptom type 2 diabetes
+          - name: symptom_unconsciousness
+            description: symptom unconsciousness
+          - name: symptom_underweight
+            description: symptom underweight
+          - name: symptom_upper_respiratory_tract_infection
+            description: symptom upper respiratory tract infection
+          - name: symptom_urethritis
+            description: symptom urethritis
+          - name: symptom_urinary_incontinence
+            description: symptom urinary incontinence
+          - name: symptom_urinary_tract_infection
+            description: symptom urinary tract infection
+          - name: symptom_urinary_urgency
+            description: symptom urinary urgency
+          - name: symptom_uterine_contraction
+            description: symptom uterine contraction
+          - name: symptom_vaginal_bleeding
+            description: symptom vaginal bleeding
+          - name: symptom_vaginal_discharge
+            description: symptom vaginal discharge
+          - name: symptom_vaginitis
+            description: symptom vaginitis
+          - name: symptom_varicose_veins
+            description: symptom varicose veins
+          - name: symptom_vasculitis
+            description: symptom vasculitis
+          - name: symptom_ventricular_fibrillation
+            description: symptom ventricular fibrillation
+          - name: symptom_ventricular_tachycardia
+            description: symptom ventricular tachycardia
+          - name: symptom_vertigo
+            description: symptom vertigo
+          - name: symptom_viral_pneumonia
+            description: symptom viral pneumonia
+          - name: symptom_visual_acuity
+            description: symptom visual acuity
+          - name: symptom_vomiting
+            description: symptom vomiting
+          - name: symptom_wart
+            description: symptom wart
+          - name: symptom_water_retention
+            description: symptom water retention
+          - name: symptom_weakness
+            description: symptom weakness
+          - name: symptom_weight_gain
+            description: symptom weight gain
+          - name: symptom_wheeze
+            description: symptom wheeze
+          - name: symptom_xeroderma
+            description: symptom xeroderma
+          - name: symptom_xerostomia
+            description: symptom xerostomia
+          - name: symptom_yawn
+            description: symptom yawn
+          - name: symptom_hyperhidrosis
+            description: symptom hyperhidrosis
+          - name: symptom_pancreatitis
+            description: symptom pancreatitis
